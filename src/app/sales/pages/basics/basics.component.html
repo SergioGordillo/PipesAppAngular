@@ -37,6 +37,12 @@
                 <li>Date | date month</li>
                 <li>Date | date month day year</li>
             </ul>
+
+            <hr/>
+            <ul>
+                <li>Date | date:'long':'GMT-6'</li>
+                <li>Date | date:'long':'':'fr'</li>
+            </ul>
         </p-card> 
     </div>
     <div class="md:col-6">
@@ -48,6 +54,12 @@
                 <li>{{date | date:'long'}}</li>
                 <li>{{date | date:'MMMM'}}</li>
                 <li>{{date | date:'MMMM dd, yyyy'}}</li>
+            </ul>
+
+            <hr/>
+            <ul>
+                <li>{{date | date:'long':'GMT-6'}}</li>
+                <li>{{date | date:'long':'GMT-6':'fr'}}</li>
             </ul>
         </p-card> 
     </div>
