@@ -6,19 +6,26 @@
 <div class="grid">
     <div class="md:col-4">
         <p-card 
-            header="Net Sales"
+            header="Net Profit"
             subheader="per year">
-            <i class="pi pi-euro"> {{netSales | number:'1.2-2'}}</i>    
+            <i class="pi pi-euro"> {{netProfit | number:'1.2-2'}}</i>    
         </p-card>
     </div>
-    <!-- <div class="md:col-4">
-        <p-card 
-            header="lowercase"
-            [subheader]="nameLower | lowercase">{{name | lowercase}}</p-card>
-    </div>
+
     <div class="md:col-4">
         <p-card 
-            header="titlecase"
-            [subheader]="nameLower | titlecase">{{name | titlecase}}</p-card>
-    </div> -->
+            header="Gross Profit"
+            subheader="per year">
+            {{netProfit | currency:'EUR'}}    
+        </p-card>
+    </div>
+
+    <div class="md:col-4">
+        <p-card 
+            header="Percentage of Profit"
+            subheader="per year">
+            {{percentage | percent}}    
+        </p-card>
+    </div>
+
 </div>
