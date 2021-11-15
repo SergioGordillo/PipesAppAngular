@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-no-commons',
@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styles: [
   ]
 })
-export class NoCommonsComponent implements OnInit {
+export class NoCommonsComponent {
 
-  constructor() { }
+  name : string = "Sergio";
+  gender: string = "masculino";
 
-  ngOnInit(): void {
-   
+  invitationMap={
+    "masculino": "invitarlo",
+    "femenino": "invitarla"
   }
+ 
 
 }
