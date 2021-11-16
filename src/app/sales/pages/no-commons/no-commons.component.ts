@@ -27,6 +27,15 @@ export class NoCommonsComponent {
      '=2': "Tenemos dos clientes esperando.",
      "other": "Tenemos # clientes esperando"
    }
+
+   changeName(){
+      this.name="María";
+      this.gender="femenino";
+   }
+
+   deleteCustomer(){
+    this.customers.pop();
+   }
  
 
 }

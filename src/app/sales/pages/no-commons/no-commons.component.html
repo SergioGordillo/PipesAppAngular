@@ -6,13 +6,20 @@
 <div class="grid">
     <div class="md:col-6">
         <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
-            Hola {{name}}, es un placer {{gender | i18nSelect: invitationMap}} a nuestro evento.
+            <p>Hola {{name}}, es un placer {{gender | i18nSelect: invitationMap}} a nuestro evento.</p>
+            <button pButton type="button" class="p-button-warning" label="Change name" (click)="changeName()"></button>
         </p-fieldset>
     </div>
     <div class="md:col-6">
         <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
-            {{customers.length | i18nPlural: customersMap}}
+            <p>{{customers.length | i18nPlural: customersMap}}</p>
+            <button pButton type="button" class="p-button-danger" label="Delete customer" (click)="deleteCustomer()"></button>
         </p-fieldset>
     </div>
-
+    <div class="md:col-6">
+        <p-fieldset legend="Slice Pipe" [toggleable]="true">
+            <strong>Original <pre>{{customers}}</pre></strong>
+            <strong>Slice 0:2 <pre> {{customers | slice:1:2}}</pre></strong>
+        </p-fieldset>
+    </div>
 </div>
