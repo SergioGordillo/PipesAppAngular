@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-no-commons',
@@ -36,6 +37,44 @@ export class NoCommonsComponent {
    deleteCustomer(){
     this.customers.pop();
    }
+
+  //KeyValue Pipe
+
+  person={
+    name: " Sergio",
+    age: " 30",
+    country: " Spain"
+  }
  
+  // JSON Pipe
+
+  footballteams=[
+    {
+      team: "Real Madrid",
+      hasChampionsLeague: true
+    },
+    {
+      team: "Juventus",
+      hasChampionsLeague: true
+    },
+    {
+      team: "Cádiz CF",
+      hasChampionsLeague: false
+    },
+    { 
+      team: "Arsenal",
+      hasChampionsLeague: false
+    }
+  ];
+
+  //Async Pipe
+
+  myObservable=interval(1000);
+
+  promiseValue=new Promise((resolve, reject)=>{
+    setTimeout(() => {
+      resolve("We have data of the promise")
+    }, 3500);
+  });
 
 }

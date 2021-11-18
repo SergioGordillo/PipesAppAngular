@@ -7,6 +7,7 @@ import { NumbersComponent } from './pages/numbers/numbers.component';
 import { NoCommonsComponent } from './pages/no-commons/no-commons.component';
 import { BasicsComponent } from './pages/basics/basics.component';
 import { SortOutComponent } from './pages/sort-out/sort-out.component';
+import { CustomizedUppercase } from './pipes/customized-uppercase.pipe';
 
 
 
@@ -16,7 +17,8 @@ import { SortOutComponent } from './pages/sort-out/sort-out.component';
     NumbersComponent,
     NoCommonsComponent,
     BasicsComponent,
-    SortOutComponent
+    SortOutComponent,
+    CustomizedUppercase
   ],
   imports: [
     CommonModule,

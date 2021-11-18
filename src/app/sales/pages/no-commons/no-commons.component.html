@@ -22,4 +22,23 @@
             <strong>Slice 0:2 <pre> {{customers | slice:1:2}}</pre></strong>
         </p-fieldset>
     </div>
+    <div class="md:col-6">
+        <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+            <ul *ngFor="let property of person | keyvalue">
+                <li>{{property.key | titlecase}}:{{property.value}}</li>
+            </ul>
+        </p-fieldset>
+    </div>
+    <div class="md:col-6">
+        <p-fieldset legend="JSON Pipe" [toggleable]="true">
+            <pre>{{footballteams |json}}</pre>
+        </p-fieldset>
+    </div>
+    <div class="md:col-6">
+        <p-fieldset legend="Async Pipe" [toggleable]="true">
+            <pre>{{myObservable | async}}</pre>
+            <pre *ngIf="!(promiseValue|async)">Loading information of the data</pre>
+            <pre>{{promiseValue | async}}</pre>
+        </p-fieldset>
+    </div>
 </div>
